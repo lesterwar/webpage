@@ -443,7 +443,7 @@ header {
 }
 
 .contact-card a:not(.button) {
-    color: var(--brown-dark);
+    color: var(--dark-brown);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
