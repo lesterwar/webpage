@@ -1,4 +1,4 @@
-/* GENERAL SETTINGS */
+/* General Settings */
 * {
     margin: 0;
     padding: 0;
@@ -7,50 +7,46 @@
 }
 
 :root {
-    --beige: #eee5d2;
-    --cream: #faf8f1;
-    --brown: #8b603e;
-    --dark-brown: #4b3829;
-    --green: #354c39;
-    --light-green: #e5e9dd;
-    --text: #30312b;
-    --muted: #727267;
-    --white: #fffefa;
-    --border: #ded6c4;
+    --background: #f5f0e6;
+    --light-background: #eee7d9;
+    --brown: #70543e;
+    --dark-brown: #3f3026;
+    --green: #68775b;
+    --text: #4b4037;
+    --white: #fffdf8;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--cream);
+    background-color: var(--background);
     color: var(--text);
     line-height: 1.7;
 }
 
-/* NAVIGATION */
+/* Navigation */
 header {
     width: 100%;
-    background-color: var(--cream);
-    border-bottom: 1px solid var(--border);
+    background-color: var(--background);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    border-bottom: 1px solid #ded5c6;
 }
 
 .navbar {
-    max-width: 1150px;
+    max-width: 1200px;
     margin: auto;
-    padding: 18px 30px;
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    color: var(--green);
     font-size: 25px;
     font-weight: bold;
+    color: var(--brown);
     text-decoration: none;
-    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -60,25 +56,26 @@ header {
 }
 
 .nav-links a {
-    color: var(--dark-brown);
+    color: var(--text);
     text-decoration: none;
     font-size: 14px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--brown);
+    color: var(--green);
 }
 
-/* HOME SECTION */
+/* Home Section */
 .home {
-    max-width: 1150px;
-    min-height: 600px;
+    min-height: 85vh;
+    max-width: 1200px;
     margin: auto;
-    padding: 80px 30px;
+    padding: 70px 40px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 60px;
 }
 
@@ -86,63 +83,65 @@ header {
     flex: 1;
 }
 
-.greeting,
-.section-subtitle {
-    color: var(--brown);
-    font-size: 12px;
+.greeting {
+    color: var(--green);
+    font-size: 13px;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .home-content h1 {
     font-size: 48px;
     line-height: 1.2;
     color: var(--dark-brown);
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .home-content h1 span {
-    color: var(--green);
+    color: var(--brown);
 }
 
 .home-content h2 {
     font-size: 22px;
-    font-weight: normal;
-    color: var(--brown);
+    color: var(--green);
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .home-content p {
-    max-width: 500px;
-    color: var(--muted);
-    margin-bottom: 30px;
+    max-width: 550px;
+    margin-bottom: 25px;
 }
 
+/* Button */
 .main-button {
     display: inline-block;
     background-color: var(--green);
-    color: var(--white);
-    padding: 12px 24px;
-    border-radius: 5px;
+    color: white;
     text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
     font-size: 14px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
 .main-button:hover {
     background-color: var(--brown);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
+/* Profile Image */
 .home-image {
-    flex: 0 0 350px;
+    width: 350px;
     height: 430px;
+    flex-shrink: 0;
     overflow: hidden;
     border-radius: 180px 180px 15px 15px;
-    background-color: var(--beige);
     border: 8px solid var(--white);
-    box-shadow: 0 10px 30px rgba(75, 56, 41, 0.12);
+    box-shadow: 0 10px 30px rgba(63, 48, 38, 0.15);
+    background-color: var(--light-background);
 }
 
 .home-image img {
@@ -150,27 +149,37 @@ header {
     height: 100%;
     object-fit: cover;
     object-position: center 25%;
+    display: block;
 }
 
-/* GENERAL SECTION SETTINGS */
+/* General Sections */
 .section {
-    padding: 85px 30px;
+    padding: 90px 40px;
+    text-align: center;
+}
+
+.alternate {
+    background-color: var(--light-background);
 }
 
 .section-heading {
-    text-align: center;
     margin-bottom: 45px;
+}
+
+.section-heading p {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .section-heading h2 {
     color: var(--dark-brown);
-    font-size: 34px;
+    font-size: 35px;
+    margin-top: 5px;
 }
 
-.section-subtitle {
-    margin-bottom: 5px;
-}
-
+/* About Section */
 .about-content {
     max-width: 800px;
     margin: auto;
@@ -178,240 +187,97 @@ header {
 }
 
 .about-content p {
-    color: var(--muted);
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-/* EDUCATION SECTION */
-.education-section {
-    background-color: var(--beige);
-}
-
-.education-grid {
-    max-width: 900px;
+/* Cards */
+.card-container {
+    max-width: 1100px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
-.education-card {
+.info-card {
     background-color: var(--white);
     padding: 30px;
+    width: 240px;
     border-radius: 10px;
-    border: 1px solid var(--border);
+    box-shadow: 0 5px 20px rgba(63, 48, 38, 0.06);
     transition: 0.3s;
 }
 
-.education-card:hover {
-    transform: translateY(-5px);
+.info-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(63, 48, 38, 0.12);
 }
 
-.education-icon {
-    color: var(--brown);
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.education-card h3 {
-    color: var(--green);
-    font-size: 19px;
-    margin-bottom: 10px;
-}
-
-.education-card h4 {
-    color: var(--dark-brown);
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.education-card p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.education-card span {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--brown);
-    font-size: 13px;
-    font-weight: bold;
-}
-
-/* SKILLS SECTION */
-.skills-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.skill-card {
-    background-color: var(--white);
-    padding: 28px 22px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(75, 56, 41, 0.08);
-}
-
-.skill-number {
-    color: var(--brown);
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.skill-card h3 {
-    color: var(--green);
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* HOBBIES SECTION */
-.hobbies-section {
-    background-color: var(--light-green);
-}
-
-.hobbies-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.hobby-card {
-    background-color: var(--white);
-    padding: 30px 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.hobby-card:hover {
-    transform: translateY(-5px);
-}
-
-.hobby-icon {
+.card-icon {
     font-size: 35px;
+    display: block;
     margin-bottom: 15px;
 }
 
-.hobby-card h3 {
-    color: var(--green);
-    font-size: 17px;
+.info-card h3 {
+    color: var(--brown);
     margin-bottom: 10px;
+    font-size: 19px;
 }
 
-.hobby-card p {
-    color: var(--muted);
-    font-size: 13px;
+.info-card h4 {
+    color: var(--dark-brown);
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
-/* CONTACT SECTION */
-.contact-section {
-    text-align: center;
+.info-card p {
+    font-size: 14px;
 }
 
-.contact-content {
-    max-width: 600px;
-    margin: auto;
+/* Contact Section */
+.contact {
+    background-color: var(--background);
 }
 
-.contact-content p {
-    color: var(--muted);
-    margin-bottom: 25px;
+.contact > p {
+    max-width: 550px;
+    margin: 0 auto 25px;
 }
 
-/* FOOTER */
+.email {
+    margin-top: 20px !important;
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* Footer */
 footer {
-    background-color: var(--green);
+    background-color: var(--dark-brown);
     color: var(--white);
-    padding: 25px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+    text-align: center;
+    padding: 25px;
     font-size: 13px;
 }
 
-footer a {
-    color: var(--beige);
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: white;
-}
-
-/* TABLET RESPONSIVE DESIGN */
-@media (max-width: 950px) {
-    .home {
-        gap: 35px;
-    }
-
-    .home-content h1 {
-        font-size: 38px;
-    }
-
-    .home-image {
-        flex-basis: 300px;
-        height: 380px;
-    }
-
-    .skills-grid,
-    .hobbies-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-}
-
-/* MOBILE RESPONSIVE DESIGN */
-@media (max-width: 600px) {
+/* Responsive Design */
+@media screen and (max-width: 850px) {
     .navbar {
         flex-direction: column;
         gap: 15px;
-        padding: 15px;
     }
 
     .nav-links {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 12px 18px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .home {
         flex-direction: column-reverse;
         text-align: center;
-        padding: 50px 22px;
-        gap: 35px;
-    }
-
-    .home-content h1 {
-        font-size: 34px;
-    }
-
-    .home-content h2 {
-        font-size: 19px;
+        padding: 50px 25px;
     }
 
     .home-content p {
@@ -419,28 +285,52 @@ footer a:hover {
         margin-right: auto;
     }
 
+    .home-content h1 {
+        font-size: 38px;
+    }
+
     .home-image {
-        flex: none;
-        width: 260px;
-        height: 320px;
+        width: 280px;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h2 {
+        font-size: 18px;
+    }
+
+    .home-image {
+        width: 240px;
+        height: 300px;
     }
 
     .section {
-        padding: 65px 22px;
+        padding: 65px 20px;
     }
 
     .section-heading h2 {
-        font-size: 28px;
+        font-size: 29px;
     }
 
-    .education-grid,
-    .skills-grid,
-    .hobbies-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
+    .info-card {
+        width: 100%;
+        max-width: 320px;
     }
 }
